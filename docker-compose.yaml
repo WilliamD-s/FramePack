@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    image: framepack:dev
+    ports: 
+      - "7880:7880"
+    volumes:
+      - ./hf_download:/hf_download
+      - ./outputs:/outputs
