@@ -7,3 +7,10 @@ services:
     volumes:
       - ./hf_download:/hf_download
       - ./outputs:/outputs
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
